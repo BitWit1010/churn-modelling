@@ -7,7 +7,8 @@ import pickle
 
 
 # Load the trained model
-model=tf.keras.models.load_model('model.h5')
+import joblib
+model = joblib.load("model.pkl")
 
 # load the scaler and label encoders
 with open('scaler.pkl', 'rb') as f:
